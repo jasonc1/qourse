@@ -1,12 +1,9 @@
-<template name="questionItem">
+<template name="questionListItem">
   <div class="question">
     <div class="question-content">
       <h3>{{title}}</h3>
       <p>{{description}}</p>
-      <p>Other things to include on this page...</p>
-      <ul>
-        <li>Comments / Answers </li>
-      </ul>
     </div>
+    <a href="{{pathFor 'questionPage'}}">Discuss</a>
   </div>
 </template>
