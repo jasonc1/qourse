@@ -1,5 +1,9 @@
 # quorse
 
+## To run:
+```cd qourse```
+```meteor```
+
 ## Meteor Notes
 
 * Code in the ```/server``` directory only runs on the server
