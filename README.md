@@ -1,4 +1,4 @@
-# quorse
+# qourse
 
 ## To run:
 ```cd qourse```
