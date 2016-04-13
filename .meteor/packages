@@ -21,3 +21,4 @@ insecure                # Allow all DB writes from clients (for prototyping)
 iron:router
 underscore
 sacha:spin
+materialize:materialize
