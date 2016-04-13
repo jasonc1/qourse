@@ -1,7 +1,6 @@
 <template name="layout">
   <body>
     <header>
-      <!-- TODO(casey): Make dropdown work... -->
       <ul id="userDropDown" class="dropdown-content">
         <li><a href="#">Profile</a></li>
         <li><a href="#">Log Out</a></li>
@@ -9,22 +8,15 @@
 
       <nav class="light-blue lighten-2" role="navigation">
         <div class="nav-wrapper container">
-         <a href="{{pathFor 'questionsList'}}" class="brand-logo">Qourse</a>
+          <a href="{{pathFor 'questionsList'}}" class="brand-logo">Qourse</a>
 
-        <span>
-          <form>
-            <div class="input-field">
-              <input id="search" type="search" required>
-              <label for="search"><i class="material-icons">search</i></label>
-              <i class="material-icons">close</i>
-            </div>
-          </form>
-        </span>
- 
-         <ul id="nav-mobile" class="right hide-on-med-and-down">
-           <li><a href="{{pathFor 'coursesList'}}">All Courses</a></li>
-           <li><a class="dropdown-button" href="#" data-activates="userDropDown">Username (todo)</a></li>
-         </ul>
+        
+   
+           <ul id="nav-mobile" class="right hide-on-med-and-down">
+             <li><a href="{{pathFor 'coursesList'}}">All Courses</a></li>
+             <li><a class="dropdown-button" href="#" 
+              data-beloworigin="true" data-activates="userDropDown">Username (todo)</a></li>
+          </ul>
         </div>
       </nav>
     </header>

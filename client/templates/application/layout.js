@@ -1,2 +1,6 @@
-$(".dropdown-button").dropdown();
-console.log("hello");
+if (Meteor.isClient) {
+  Template.layout.onRendered(function(){
+      $(".dropdown-button").dropdown();
+  });
+
+}
