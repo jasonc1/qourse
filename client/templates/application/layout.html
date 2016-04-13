@@ -10,6 +10,16 @@
       <nav class="light-blue lighten-2" role="navigation">
         <div class="nav-wrapper container">
          <a href="{{pathFor 'questionsList'}}" class="brand-logo">Qourse</a>
+
+        <span>
+          <form>
+            <div class="input-field">
+              <input id="search" type="search" required>
+              <label for="search"><i class="material-icons">search</i></label>
+              <i class="material-icons">close</i>
+            </div>
+          </form>
+        </span>
  
          <ul id="nav-mobile" class="right hide-on-med-and-down">
            <li><a href="{{pathFor 'coursesList'}}">All Courses</a></li>
