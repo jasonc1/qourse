@@ -10,11 +10,10 @@
         <div class="nav-wrapper container">
           <a href="{{pathFor 'questionsList'}}" class="brand-logo">Qourse</a>
 
-        
-   
-           <ul id="nav-mobile" class="right hide-on-med-and-down">
-             <li><a href="{{pathFor 'coursesList'}}">All Courses</a></li>
-             <li><a class="dropdown-button" href="#" 
+          
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="{{pathFor 'coursesList'}}">All Courses</a></li>
+            <li><a class="dropdown-button" href="#" 
               data-beloworigin="true" data-activates="userDropDown">Username (todo)</a></li>
           </ul>
         </div>
@@ -22,7 +21,34 @@
     </header>
 
     <main>
-      {{> yield}}
+      <div class="container">
+        {{> yield}}
+      </div>
     </main>
   </body>
+
+ <footer class="page-footer light-blue darken-1">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Qourse</h5>
+          <p class="grey-text text-lighten-4">Add whatever here??</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Site Map</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="{{pathFor 'aboutPage'}}">About</a></li>
+            <li><a class="grey-text text-lighten-3" href="{{pathFor 'coursesList'}}">Courses</a></li>
+            <li><a class="grey-text text-lighten-3" href="{{pathFor 'questionsList'}}">Questions</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made with <a class="white-text" href="http://materializecss.com/" target=blank>Materialize</a>
+      <a class="grey-text text-lighten-4 right" href="#!"></a>
+      </div>
+    </div>
+  </footer>
 </template>

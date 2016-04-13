@@ -1,11 +1,7 @@
 <template name="coursesList">
-  <div class="container">
-    <div class="courses">
-      <ul>
-      {{#each courses}}
-        {{> courseListItem}}
-      {{/each}}
-       </ul>
-    </div>
+  <div class="courses">
+    {{#each courses}}
+      {{> courseListItem}}
+    {{/each}}
   </div>
 </template>
