@@ -12,18 +12,29 @@
     <nav class="light-blue lighten-1" role="navigation">
       <div class="nav-wrapper container">
 
-        <a href="#" class="brand-logo">Qourse</a>
+        <a href="/" class="brand-logo">Qourse</a>
+
+        <div class="search-wrapper">
+
+        </div>
+
+        <ul id="userDropdown" class="dropdown-content">
+          <li><a href="#!">My Profile</a></li>
+          <li class="divider"></li>
+          <li><a href="#!">Log Out</a></li>
+        </ul>
 
         <ul class="right hide-on-med-and-down">
           <li><a href="#">Ask</a></li>
           <li><a href="#">Browse</a></li>
-          <li><a href="#">(me)</a></li>
+          <li><a class="dropdown-button" href="#" data-beloworigin="true" data-activates="userDropdown">(username)<i class="material-icons right">arrow_drop_down</i></a></li>      
         </ul>
 
         <ul id="nav-mobile" class="side-nav">
           <li><a href="#">Ask</a></li>
           <li><a href="#">Browse</a></li>
-          <li><a href="#">(me)</a></li>
+          <li><a href="#">(my profile)</a></li>
+          <li><a href="#">Log Out</a></li>
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
       </div>
@@ -46,10 +57,7 @@
   <script>
     $(document).ready(function() {
       $(".button-collapse").sideNav();
+      $(".dropdown-button").dropdown();
     })
   </script>
-</template>
-
-<template name="dashboard">
-  Test!
 </template>
