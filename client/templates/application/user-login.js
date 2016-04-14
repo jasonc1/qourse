@@ -5,7 +5,9 @@ if (Meteor.isClient) {
       console.log("Form submitted.");
       var userVar = event.target.loginUsername.value;
       var passVar = event.target.loginPassword.value;
-      Meteor.loginWithPassword(userVar, passwordVar);
+      Meteor.loginWithPassword(userVar, passVar, function() {
+        console.log("hi");
+      });
     }
   });
 }

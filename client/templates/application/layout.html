@@ -22,8 +22,10 @@
       {{#if currentUser}} 
         {{>Template.dynamic template=content}}
       {{else}}
-        {{> register}}
-        {{> login}}
+        <div class="row">
+          {{> login}}
+          {{> register}}
+        </div>
       {{/if}}
     </div>
   </main>
