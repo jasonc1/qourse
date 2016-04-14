@@ -1,11 +1,21 @@
 <template name="layout">
-  My layout
-  {{> Template.dynamic template=content}}
+  <body>
+    <header>
+      {{> header}}
+    </header>
+
+    <main>
+      <p>My layout</p>
+      {{> Template.dynamic template=content}}
+    </main>
+
+    <footer>
+      {{> footer}}
+    </footer>
+  </body>
 </template>
 
 <template name="dashboard">
-  <ol>
-    <li>HI</li>
-    <li>Bye</li>
-  </ol>
+  dis the dashboard
+  {{> questionList}}
 </template>

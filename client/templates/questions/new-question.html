@@ -1,0 +1,10 @@
+<template name="newQuestion">
+  {{#if currentUser }}
+    <form>
+      <input type="text" name="question">
+      <label for="question">Question</label>
+    </form>
+  {{else}}
+    <p>Sign in to ask a new question.</p>
+  {{/if}}
+</template>

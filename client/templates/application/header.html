@@ -1,0 +1,20 @@
+<template name="header">
+  <div>
+    <ul>
+      <li><a href="{{pathFor 'dashboard'}}">Qourse</a></li>
+      <li><a href="{{pathFor 'askQuestion'}}">Ask new question</a></li>
+      <li>Search</li>
+      <li><a href="{{pathFor 'allCourses'}}">Browse courses</a></li>
+      {{> authHeader}}
+    </ul>
+  </div>
+</template>
+
+<template name="authHeader">
+  {{#if currentUser }}
+    <li>My profile</li>
+    <li>Log out</li>
+  {{else }}
+    <li>Log in / Sign up</li>
+  {{/if}}
+</template>
