@@ -1,0 +1,55 @@
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>QOURSE</title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<template name="mainLayout">
+  <header>
+    <nav class="light-blue lighten-1" role="navigation">
+      <div class="nav-wrapper container">
+
+        <a href="#" class="brand-logo">Qourse</a>
+
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#">Ask</a></li>
+          <li><a href="#">Browse</a></li>
+          <li><a href="#">(me)</a></li>
+        </ul>
+
+        <ul id="nav-mobile" class="side-nav">
+          <li><a href="#">Ask</a></li>
+          <li><a href="#">Browse</a></li>
+          <li><a href="#">(me)</a></li>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      {{>Template.dynamic template=content}}
+    </div>
+  </main>
+
+  <footer>
+
+  </footer>
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+
+  <script>
+    $(document).ready(function() {
+      $(".button-collapse").sideNav();
+    })
+  </script>
+</template>
+
+<template name="dashboard">
+  Test!
+</template>
