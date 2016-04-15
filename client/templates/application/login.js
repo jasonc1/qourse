@@ -18,3 +18,11 @@ Accounts.onLogin(function() {
     FlowRouter.go("/");
   }
 });
+
+Accounts.onLoginFailure(function() {
+  alert("Login failed");
+  var path = FlowRouter.current().path;
+  if (path === "/login") {
+    FlowRouter.go('/login');
+  }
+});

@@ -1,3 +1,22 @@
 <template name="questionItem">
-  I am a question item!
+  <div>
+    <h4>{{ question.title }}</h4>
+    <p>Asked by {{ question.author }} at {{ question.time }}</p>
+  </div>
+
+  {{#if currentUser }}
+    <div>
+      <p>Answer this question</p>
+      <form class="answer-question">
+        <label for="answer">Response</label>
+        <input type="text" name="answer" placeholder="Type your response here"/>
+      </form>
+    </div>
+  {{/if}}
+
+  <div>
+    <h4>Responses</h4>
+    {{>commentList}}
+  </div>
+
 </template>
