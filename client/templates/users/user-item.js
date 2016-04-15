@@ -6,6 +6,6 @@ Template.userItem.helpers({
 
   userQuestions: function() {
     var userVar = FlowRouter.getParam("username");
-    return Questions.find({author: userVar});
+    return Questions.find({author: userVar}, {sort: {time: -1}});
   }
 });
