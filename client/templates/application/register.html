@@ -1,3 +1,16 @@
 <template name="register">
-  I am the registration page!
+  <form class="user-register">
+    <label for="registerUsername">Username</label>
+    <input type="text" name="registerUsername" />
+    <br />
+    <label for="registerEmail">Email</label>
+    <input type="email" name="registerEmail" />
+    <br />
+    <label for="registerPassword">Password</label>
+    <input type="password" name="registerPassword" />
+    <br />
+    <input type="submit" name="submit" value="Register">
+  </form>
+
+  <p>Already have an account? <a href="{{pathFor 'userLogin'}}">Log in here.</a></p>
 </template>
