@@ -1,4 +1,14 @@
 <template name="questionList">
+  {{#if currentUser }}
+    <div class="container">
+      <form class="new-question">
+        <input type="text" name="question" placeholder="Question" />
+      </form>
+    </div>
+  {{/if}}
+
   I am making the question list!
-  {{> questionItem }}
+  {{#each questions }}
+    {{> questionListItem }}
+  {{/each }}
 </template>
