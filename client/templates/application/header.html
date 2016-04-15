@@ -12,7 +12,7 @@
 
 <template name="authHeader">
   {{#if currentUser }}
-    <li>My profile ({{ currentUser.username }})</li>
+    <li><a href="{{pathFor 'userPage' username=currentUser.username}}">My profile ({{ currentUser.username }})</a></li>
     <li><a href="#" class="logout">Log out</a></li>
   {{else }}
     <li><a href="{{pathFor 'userLogin'}}">Log in / Sign up</a></li>

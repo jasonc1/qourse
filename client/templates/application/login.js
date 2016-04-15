@@ -8,7 +8,9 @@ Template.login.events({
     var passVar = target.loginPassword.value;
 
     Meteor.loginWithPassword(userVar, passVar, function(error) {
-      alert(error.reason);
+      if (error != undefined) { 
+        alert(error.reason);
+      }
     });
   },
 });
