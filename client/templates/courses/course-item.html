@@ -1,3 +1,8 @@
 <template name="courseItem">
-  I am course item
+  <div>
+    <h2>{{ course.courseNum }} : {{ course.title }}</h2>
+    <p>{{ course.units }} Units</p>
+    <p>Taught by {{ course.instructors }}</p>
+    <p>{{ course.description }}</p>
+  </div>
 </template>
