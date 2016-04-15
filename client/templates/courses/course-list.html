@@ -1,4 +1,6 @@
 <template name="courseList">
-  Course list
-  {{> courseItem}}
+  <h2>Courses</h2>
+  {{#each courses}}
+    {{> courseListItem}}
+  {{/each}}
 </template>

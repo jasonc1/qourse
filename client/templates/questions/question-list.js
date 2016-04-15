@@ -1,6 +1,5 @@
 Template.questionList.helpers({
   questions: function() {
-    console.log("hi?");
     return Questions.find({}, {sort: {time: -1}});
   },
 });
@@ -14,7 +13,7 @@ Template.questionList.events({
 
     Questions.insert({
       title: text,
-      author: Meteor.user().profile.username,
+      author: Meteor.user().username,
       time: new Date(),
     });
 

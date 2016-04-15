@@ -2,7 +2,7 @@
   <div>
     <ul>
       <li><a href="{{pathFor 'dashboard'}}">Qourse</a></li>
-      <li><a href="{{pathFor 'askQuestion'}}">Ask new question</a></li>
+      <!--<li><a href="{{pathFor 'askQuestion'}}">Ask new question</a></li>-->
       <li>Search</li>
       <li><a href="{{pathFor 'allCourses'}}">Browse courses</a></li>
       {{> authHeader}}
@@ -13,8 +13,8 @@
 <template name="authHeader">
   {{#if currentUser }}
     <li>My profile</li>
-    <li>Log out</li>
+    <li><a href="#" class="logout">Log out</a></li>
   {{else }}
-    <li>Log in / Sign up</li>
+    <li><a href="{{pathFor 'userLogin'}}">Log in / Sign up</a></li>
   {{/if}}
 </template>
