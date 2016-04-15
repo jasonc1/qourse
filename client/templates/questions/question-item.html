@@ -1,7 +1,7 @@
 <template name="questionItem">
   <div>
     <h4>{{ question.title }}</h4>
-    <p>Asked by {{ question.author }} at {{ question.time }}</p>
+    <p>Asked by <a href="{{pathFor 'userPage' username=question.author}}">{{ question.author }}</a> at {{ question.time }}</p>
   </div>
 
   {{#if currentUser }}

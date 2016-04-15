@@ -1,4 +1,11 @@
 <template name="userItem">
   <h3>User Profile: {{ user.username }}</h3>
   I will be a profile page!!
+
+  <div>
+    <h3>Questions Asked by {{ user.username }}</h3>
+    {{#each userQuestions }}
+      {{> questionListItem}}
+    {{/each}}
+  </div>
 </template>
