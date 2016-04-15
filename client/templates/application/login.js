@@ -7,7 +7,9 @@ Template.login.events({
     var userVar = target.loginUsername.value;
     var passVar = target.loginPassword.value;
 
-    Meteor.loginWithPassword(userVar, passVar);
+    Meteor.loginWithPassword(userVar, passVar, function(error) {
+      alert(error.reason);
+    });
   },
 });
 
@@ -20,7 +22,6 @@ Accounts.onLogin(function() {
 });
 
 Accounts.onLoginFailure(function() {
-  alert("Login failed");
   var path = FlowRouter.current().path;
   if (path === "/login") {
     FlowRouter.go('/login');
