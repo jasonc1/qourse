@@ -2,5 +2,6 @@
   <div>
     <h4><a href="{{pathFor 'questionPage' _id=_id}}">{{ title }}</a></h4>
     <p>Asked by <a href="{{pathFor 'userPage' username=author}}">{{ author }}</a> at {{ time }}</p>
+    <p>{{ responseCount }} Responses</p>
   </div>
 </template>

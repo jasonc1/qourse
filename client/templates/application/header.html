@@ -7,12 +7,12 @@
       <a class = "navButton right">SEARCH </a>
       <a href="{{pathFor 'allCourses'}}" class = "navButton right">BROWSE COURSES</a>
 
-
   </nav>
 </template>
 
 <template name="authHeader">
   {{#if currentUser }}
+    <!-- This is meant to be a drop down -->
     <a class="navButton right logout" href="#">LOG OUT</a>
     <a class="navButton right" href="{{pathFor 'userPage' username=currentUser.username}}">MY PROFILE ({{ currentUser.username }})</a>
   {{else }}

@@ -1,6 +1,10 @@
 Template.questionItem.helpers({
   question: function() {
     return Questions.findOne({_id: FlowRouter.current().params._id});
+  },
+
+  responseCount: function() {
+    return Comments.find({questionId: FlowRouter.current().params._id}).count();
   }
 });
 
