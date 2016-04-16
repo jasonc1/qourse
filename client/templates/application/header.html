@@ -1,20 +1,21 @@
 <template name="header">
-  <div>
-    <ul>
-      <li><a href="{{pathFor 'dashboard'}}">Qourse</a></li>
+  <nav>
+    
+      <a href="{{pathFor 'dashboard'}}" class = "navButton left"><div class = "title">Qourse</div></a>
       <!--<li><a href="{{pathFor 'askQuestion'}}">Ask new question</a></li>-->
-      <li>Search</li>
-      <li><a href="{{pathFor 'allCourses'}}">Browse courses</a></li>
       {{> authHeader}}
-    </ul>
-  </div>
+      <a class = "navButton right">SEARCH </a>
+      <a href="{{pathFor 'allCourses'}}" class = "navButton right">BROWSE COURSES</a>
+
+
+  </nav>
 </template>
 
 <template name="authHeader">
   {{#if currentUser }}
-    <li><a href="{{pathFor 'userPage' username=currentUser.username}}">My profile ({{ currentUser.username }})</a></li>
-    <li><a href="#" class="logout">Log out</a></li>
+    <a href="{{pathFor 'userPage' username=currentUser.username}}">My profile ({{ currentUser.username }})</a>
+    <a href="#" class="logout">Log out</a>
   {{else }}
-    <li><a href="{{pathFor 'userLogin'}}">Log in / Sign up</a></li>
+    <a href="{{pathFor 'userLogin'}}" class = "navButton right">LOGIN / SIGNUP</a>
   {{/if}}
 </template>
