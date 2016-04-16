@@ -1,7 +1,6 @@
 <template name="questionListItem">
   <div>
-    <h4>{{ title }}</h4>
-    <span><a href="{{pathFor 'questionPage' _id=_id}}">View more >></a></span>
+    <h4><a href="{{pathFor 'questionPage' _id=_id}}">{{ title }}</a></h4>
     <p>Asked by <a href="{{pathFor 'userPage' username=author}}">{{ author }}</a> at {{ time }}</p>
   </div>
 </template>
