@@ -1,12 +1,12 @@
 <template name="header">
   <nav>
-    
+    <div class="container">    
       <a href="{{pathFor 'dashboard'}}" class = "navButton left"><div class = "title">Qourse</div></a>
       <!--<li><a href="{{pathFor 'askQuestion'}}">Ask new question</a></li>-->
       {{> authHeader}}
       <a class = "navButton right">SEARCH </a>
       <a href="{{pathFor 'allCourses'}}" class = "navButton right">BROWSE COURSES</a>
-
+    </div>
   </nav>
 </template>
 
