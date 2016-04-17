@@ -27,6 +27,10 @@ body{
   background-color: #eee;
 }
 
+main {
+  margin-top: 4em;
+}
+
 /*
 =====================NAV BAR=====================
 */
