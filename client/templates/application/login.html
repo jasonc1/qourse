@@ -1,14 +1,21 @@
 <template name="login">
-  <form class="user-login">
-    <div class="row">
-      <label for="loginUsername">Username</label>
-      <input type="text" name="loginUsername" />
+    <div class = "row">
+      <div class = "six columns">
+        <form class="user-login">
+          <div class="row">
+            <h1 id = "login">LOGIN</h1>
 
-      <label for="loginPassword">Password</label>
-      <input type="password" name="loginPassword" />
+            <label for="loginUsername">USERNAME</label>
+            <input class = "text" type="text" name="loginUsername" />
+
+            <label for="loginPassword">PASSWORD</label>
+            <input class = "text" type="password" name="loginPassword" />
+          </div>
+          <br>
+          <input class="button-primary right" type="submit" name="submit" value="Log in">
+        </form>
+      </div>
     </div>
-    <input class="button-primary" type="submit" name="submit" value="Log in">
-  </form>
 
-  <p>Don't have an account? <a href="{{pathFor 'userRegistration'}}">Sign up here.</a></p>
+  <p>Don't have an account? <a id = "sign" href="{{pathFor 'userRegistration'}}">Sign up here.</a></p>
 </template>

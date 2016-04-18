@@ -1,17 +1,23 @@
 <template name="register">
-  <form class="user-register">
-    <div class="row">
-      <label for="registerUsername">Username</label>
-      <input type="text" name="registerUsername" />
+  <div class = "row">
+    <div class = "six columns">
+      <form class="user-register">
+        <div class="row">
+          <h1 id = "login">SIGN UP</h1>
+          <label for="registerUsername">USERNAME</label>
+          <input class = "text" type="text" name="registerUsername" />
 
-      <label for="registerEmail">Email</label>
-      <input type="email" name="registerEmail" />
+          <label for="registerEmail">EMAIL</label>
+          <input class ="text" type="email" name="registerEmail" />
 
-      <label for="registerPassword">Password</label>
-      <input type="password" name="registerPassword" />
+          <label for="registerPassword">PASSWORD</label>
+          <input class = "text" type="password" name="registerPassword" />
+        </div>
+        <input class="button-primary right" type="submit" name="submit" value="Register">
+      </form>
     </div>
-    <input class="button-primary" type="submit" name="submit" value="Register">
-  </form>
+  </div>
 
-  <p>Already have an account? <a href="{{pathFor 'userLogin'}}">Log in here.</a></p>
+
+  <p>Already have an account? <a id = "sign" href="{{pathFor 'userLogin'}}">Log in here.</a></p>
 </template>
