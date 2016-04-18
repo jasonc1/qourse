@@ -91,19 +91,56 @@ form.new-question input{
   padding-bottom: 10px;
   color: white;
   margin-bottom: 3rem;
+  font-size: 10pt;
 }
+
 form.new-question input:focus{
-  border: solid white;
+  border: solid #00DC8F;
+  transition: border .5s;
 }
+
 
 
 form.new-question input::-webkit-input-placeholder {
   color: white;
 }
 
-#newQ{
 
+#submitQ{
+  font-weight: 100;
+  letter-spacing: .2rem;
+  padding: 5px;
+  font-size: 10pt;
 }
+
+form.new-response label{
+  color: white;
+  font-size: 10pt;
+  margin-top: 3rem;
+}
+
+form.new-response input{
+  background-color: #4FB5F7;
+  border: solid white;
+  width: 100%;
+  height: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  margin-bottom: 3rem;
+  font-size: 10pt; 
+}
+form.new-response input:focus{
+  border: solid #00DC8F;
+  transition: border .5s;
+}
+
+
+
+form.new-response input::-webkit-input-placeholder {
+  color: white;
+}
+
 
 /*
 =====================BODY=====================
