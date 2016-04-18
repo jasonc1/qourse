@@ -55,7 +55,6 @@ nav{
   letter-spacing: .2em;
   font-size: 35px;
   line-height: 6.5rem;
-  padding-left: 10px;
   font-weight: 800;
   color: #4FB5F7;
 }
@@ -80,7 +79,7 @@ nav a{
 
 #main {
   background-color: #fff;
-  margin-top: 10rem;
+  margin-top: 6.5rem;
 }
 
 .card{
