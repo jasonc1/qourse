@@ -1,7 +1,7 @@
 <template name="questionItem">
-  <div>
-    <h4>{{ question.title }}</h4>
-    <p>Asked by <a href="{{pathFor 'userPage' username=question.author}}">{{ question.author }}</a> at {{ question.time }}</p>
+  <div class = "card">
+    <h4 id = "question">{{ question.title }}</h4>
+    <p class = "description">Asked by <a href="{{pathFor 'userPage' username=question.author}}">{{ question.author }}</a> at {{ question.time }}</p>
   </div>
 
   {{#if currentUser }}
@@ -14,7 +14,7 @@
     </div>
   {{/if}}
 
-  <div>
+  <div class = "response">
     <h4>Responses ({{ responseCount }})</h4>
     {{>commentList}}
   </div>

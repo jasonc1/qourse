@@ -26,14 +26,19 @@ body{
   background-color: #4FB5F7;
 }
 
+a{
+  text-decoration: none;
+}
+
 a:hover{
   color: #000;
   transition: color .5s;
 }
 
-main {
-  margin-top: 6.5rem;
+#content{
+  margin-top: 13rem;
 }
+
 
 /*
 =====================NAV BAR=====================
@@ -77,13 +82,27 @@ nav a{
 */
 
 #main {
-  background-color: #fff;
   margin-top: 6.5rem;
   margin-bottom: 6.5rem;
 }
 
 .card{
+  background-color: #fff;
+  width: 100%;
+  padding: 35px 15px 35px 15px;
+}
 
+#question{
+  color: #4FB5F7;
+}
+
+.description{
+  font-size: 10pt;
+}
+
+.response{
+  margin-top: 2rem;
+  color: #fff;
 }
 
 
@@ -99,5 +118,10 @@ nav a{
 #copyright{
   font-size: 10pt;
   padding-top: 4rem;
+  color: #4FB5F7;
 }
 
+
+#mostrecent{
+  color: #fff;
+}
