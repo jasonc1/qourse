@@ -32,6 +32,10 @@ a:hover{
   transition: color .5s;
 }
 
+main {
+  margin-top: 6.5rem;
+}
+
 /*
 =====================NAV BAR=====================
 */

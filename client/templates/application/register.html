@@ -1,15 +1,16 @@
 <template name="register">
   <form class="user-register">
-    <label for="registerUsername">Username</label>
-    <input type="text" name="registerUsername" />
-    <br />
-    <label for="registerEmail">Email</label>
-    <input type="email" name="registerEmail" />
-    <br />
-    <label for="registerPassword">Password</label>
-    <input type="password" name="registerPassword" />
-    <br />
-    <input type="submit" name="submit" value="Register">
+    <div class="row">
+      <label for="registerUsername">Username</label>
+      <input type="text" name="registerUsername" />
+
+      <label for="registerEmail">Email</label>
+      <input type="email" name="registerEmail" />
+
+      <label for="registerPassword">Password</label>
+      <input type="password" name="registerPassword" />
+    </div>
+    <input class="button-primary" type="submit" name="submit" value="Register">
   </form>
 
   <p>Already have an account? <a href="{{pathFor 'userLogin'}}">Log in here.</a></p>

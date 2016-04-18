@@ -1,12 +1,13 @@
 <template name="login">
   <form class="user-login">
-    <label for="loginUsername">Username</label>
-    <input type="text" name="loginUsername" />
-    <br />
-    <label for="loginPassword">Password</label>
-    <input type="password" name="loginPassword" />
-    <br />
-    <input type="submit" name="submit" value="Log in">
+    <div class="row">
+      <label for="loginUsername">Username</label>
+      <input type="text" name="loginUsername" />
+
+      <label for="loginPassword">Password</label>
+      <input type="password" name="loginPassword" />
+    </div>
+    <input class="button-primary" type="submit" name="submit" value="Log in">
   </form>
 
   <p>Don't have an account? <a href="{{pathFor 'userRegistration'}}">Sign up here.</a></p>
