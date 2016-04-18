@@ -1,7 +1,9 @@
 <template name="questionListItem">
-  <div class = "card">
-    <h4 id = "question"><a href="{{pathFor 'questionPage' _id=_id}}">{{ title }}</a></h4>
-    <p id = "details" >Asked by <a href="{{pathFor 'userPage' username=author}}">{{ author }}</a> at {{ time }}</p>
-    <p>{{ responseCount }} Responses</p>
-  </div>
+      <div class = "card">
+        <h4 id = "question"><a href="{{pathFor 'questionPage' _id=_id}}">{{ title }}</a></h4>
+        <p class = "details" >Asked by <a href="{{pathFor 'userPage' username=author}}">{{ author }}</a> at {{ time }}</p>
+        <p class = "responseCount">{{ responseCount }} Responses</p>
+
+      </div>
+  
 </template>
