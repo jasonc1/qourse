@@ -12,8 +12,7 @@
 
 
 .center{
-  width:50%;
-  margin: 0 auto;
+text-align: center
 }
 
 
@@ -80,10 +79,25 @@ nav a{
 #main {
   background-color: #fff;
   margin-top: 6.5rem;
+  margin-bottom: 6.5rem;
 }
 
 .card{
 
+}
 
+
+/*
+=====================FOOTER=====================
+*/
+
+#footer{
+  height: 13rem;
+  width: 100%;
+  background-color: #fff;
+}
+#copyright{
+  font-size: 10pt;
+  padding-top: 4rem;
 }
 
