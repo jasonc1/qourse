@@ -1,6 +1,6 @@
 <template name="questionItem">
   <div class = "card">
-    <h4 id = "question">{{ question.title }}</h4>
+    <h4 id = "question" class = "blue">{{ question.title }}</h4>
     <p class = "details">Asked by <a href="{{pathFor 'userPage' username=question.author}}">{{ question.author }}</a> at {{ question.time }}</p>
   </div>
 
