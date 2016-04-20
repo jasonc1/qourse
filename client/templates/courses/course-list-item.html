@@ -1,7 +1,7 @@
 <template name="courseListItem">
-  <div>
-    <h3>{{ courseNum }} : {{ title }}</h3>
-    <p>{{ description }}</p>
-    <p><a href="{{pathFor 'coursePage' _id=_id}}">See details >></a></p>
+  <div class = "card">
+    <h4>{{ courseNum }} : {{ title }}</h4>
+    <p class = "course-description">{{ description }}</p>
+    <p><a href="{{pathFor 'coursePage' _id=_id}}">See details</a></p>
   </div>
 </template>

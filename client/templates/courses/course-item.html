@@ -1,9 +1,9 @@
 <template name="courseItem">
-  <div>
-    <h2>{{ course.courseNum }} : {{ course.title }}</h2>
-    <p>{{ course.units }} Units</p>
+  <div class = "card">
+    <h2 class = "course-title">{{ course.courseNum }} : {{ course.title }}</h2>
+    <p><b>{{ course.units }} Units</b></p>
     <p>Taught by {{ course.instructors }}</p>
-    <p>{{ course.description }}</p>
+    <p class = "course-description">{{ course.description }}</p>
   </div>
 
   <div>

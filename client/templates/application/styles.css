@@ -45,6 +45,9 @@ a:hover{
   margin-top: 13rem;
   margin-bottom: 6.5rem;
 }
+h2{
+  color: white;
+}
 
 
 /*
@@ -175,7 +178,7 @@ form.new-response input::-webkit-input-placeholder {
 .card{
   background-color: #fff;
   width: 100%;
-  padding: 45px 0px 15px 30px;
+  padding: 45px 30px 15px 30px;
   margin-right: 0px;
   margin-bottom: 3rem;
   display: inline-block;
@@ -224,6 +227,15 @@ input.text{
 
 .responseCount{
   font-size: 10pt;
+}
+
+
+p.course-description{
+  font-size: 10pt;
+}
+
+h2.course-title{
+  color: #4FB5F7;
 }
 /*
 =====================FOOTER=====================
