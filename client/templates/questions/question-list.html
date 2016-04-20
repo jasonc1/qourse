@@ -3,22 +3,21 @@
       <form class="new-question">
         <div class = "row">
           <div class = "twelve columns">
-            <input id = "newQ" type="text" name="question" placeholder="ASK A QUESTION..." />
-            <input id = "description" type="text" name ="description" placeholder= "ADD A DESCRIPTION..."/>
+            <input class = "questionInput" type="text" name="question" placeholder="ASK A QUESTION..." />
+            <input class = "questionInput" type="text" name ="description" placeholder= "ADD A DESCRIPTION..."/>
+            <input class = "questionInput" type = "text" name= "tags" placeholder = "ADD TAG(S) [optional]"/>
           </div>
-        <div class = "row">
-          <div class = "ten columns">
-            <input id = "tags" type = "text" name= "tags" placeholder = "ADD TAG(S) [optional]"/>
+          <div class = "row">
+            <div class = "three columns left">
+              <input class="button-primary" id = "submitQ" type="submit" name="submit" value="submit"/>
+            </div>
+            <div class = "four columns">
+              <label class="askAnon">
+                <input type="checkbox"/>
+                <span class="label-body">ASK AS ANONYMOUS</span>
+              </label>
+            </div>
           </div>
-          <div class = "two columns right">
-            <input class="button-primary" id = "submitQ" type="submit" name="submit" value="submit">
-
-          </div>
-        </div>
-
-        
-
-
         </div>
         
       </form>

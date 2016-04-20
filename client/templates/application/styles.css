@@ -60,7 +60,7 @@ nav{
   width: 100%;
   z-index: 99;
   display: block;
-  box-shadow: 0px 3px 20px 1px #999;
+  box-shadow: 0px 3px 10px 0px #333;
 }
 
 .title{
@@ -83,7 +83,7 @@ nav a{
   letter-spacing: .2rem
 }
 
-form.new-question input{
+form.new-question input.questionInput{
   background-color: #4FB5F7;
   border: solid white;
   width: 100%;
@@ -138,10 +138,28 @@ form.new-response input:focus{
   transition: border .5s;
 }
 
+span.label-body{
+  font-size: 10pt;
+  color: white;
+  letter-spacing: .2rem;
+}
+
 
 
 form.new-response input::-webkit-input-placeholder {
   color: white;
+}
+
+.button-primary#submitQ{
+  background-color: #00DC8F;
+  font-size: 10pt;
+  padding: 0px 30px 0px 30px;
+}
+
+.button-primary#submitQ:hover{
+  background-color: #fff;
+  color: #000;
+  transition: background-color 1s, color 1s;
 }
 
 
@@ -156,13 +174,12 @@ form.new-response input::-webkit-input-placeholder {
 
 .card{
   background-color: #fff;
-  width: 65%;
-  max-height: 400px;
-  margin-right: 10px;
-  padding: 45px 30px 15px 30px;
+  width: 100%;
+  padding: 45px 0px 15px 30px;
+  margin-right: 0px;
   margin-bottom: 3rem;
   display: inline-block;
-  box-shadow: 2px 6px 20px 1px #999;
+  box-shadow: 0px 3px 20px 0px #333;
 }
 
 h4#question{
@@ -172,6 +189,7 @@ h4#question{
 
 .details{
   font-size: 10pt;
+  margin-bottom: 5rem;
 }
 
 .response{
