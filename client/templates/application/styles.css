@@ -53,6 +53,13 @@ h2{
 /*
 =====================NAV BAR=====================
 */
+div#mobile-nav{
+  display:none;
+}
+
+
+
+
 nav{
   position:fixed;
   top:0;
@@ -255,4 +262,69 @@ h2.course-title{
 
 #mostrecent{
   color: #fff;
+}
+
+
+
+
+/*
+=====================MEDIA QUERIES=====================
+*/
+@media (max-width: 950px) {
+  div#nav{
+      display:none;
+  }
+  div#mobile-nav{
+    display:inline-block;
+    line-height: 6.5rem;
+  }
+  /* Dropdown Button */
+.dropbtn {
+    color: #4FB5F7;
+    height: 6rem;
+    font-size: 10pt;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 1em;
+}
+img#menu{
+  height: 2rem;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    left:auto;
+    right:0;
+    margin-right:-10px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: #4FB5F7;
+    padding-left: 6px;
+    text-decoration: none;
+    display: block;
+
+
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+
 }

@@ -1,20 +1,43 @@
 <template name="header">
   <nav>
-    <div class="container">    
+    <div class="container" >    
       <a href="{{pathFor 'dashboard'}}" class = "navButton left"><div class = "title">Qourse</div></a>
       <!--<li><a href="{{pathFor 'askQuestion'}}">Ask new question</a></li>-->
-      {{> authHeader}}
-      <a class = "navButton right">SEARCH </a>
-      <a href="{{pathFor 'allCourses'}}" class = "navButton right">BROWSE COURSES</a>
+      <div id = "nav">
+        {{> authHeader}}
+        <a href="{{pathFor 'allCourses'}}" class = "navButton right">BROWSE COURSES</a>
+        <a class = "navButton right">SEARCH </a>
+      </div>
+
+      <div class = "right" id ="mobile-nav">
+        <div class="dropdown">
+          <div class="dropbtn"><img id = "menu" src = "http://f.cl.ly/items/1U2c3b1215383h3a2T2r/icon-menu.svg"/></div>
+          <div class="dropdown-content">
+            <a class = "navButton">SEARCH </a>
+            <a href="{{pathFor 'allCourses'}}" class = "navButton">COURSES</a>
+            {{> authHeaderMobile}}
+          </div>
+        </div>
+      </div>
+      
+
     </div>
   </nav>
 </template>
 
 <template name="authHeader">
   {{#if currentUser }}
-    <!-- This is meant to be a drop down -->
     <a class="navButton right logout" href="#">LOG OUT</a>
     <a class="navButton right" href="{{pathFor 'userPage' username=currentUser.username}}">MY PROFILE ({{ currentUser.username }})</a>
+  {{else }}
+    <a href="{{pathFor 'userLogin'}}" class = "navButton right">LOGIN / SIGNUP</a>
+  {{/if}}
+</template>
+
+<template name="authHeaderMobile">
+  {{#if currentUser }}
+    <a class="navButton logout" href="#">LOG OUT</a>
+    <a class="navButton" href="{{pathFor 'userPage' username=currentUser.username}}">PROFILE </a>
   {{else }}
     <a href="{{pathFor 'userLogin'}}" class = "navButton right">LOGIN / SIGNUP</a>
   {{/if}}
