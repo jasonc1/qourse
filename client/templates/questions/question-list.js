@@ -11,9 +11,16 @@ Template.questionList.events({
     const target = event.target;
     const text = target.question.value;
 
+    var anon = document.getElementById('anon');
+    if (anon.checked) {
+      auth = "Anonymous User";
+    } else {
+      auth = Meteor.user().username;
+    }
+
     Questions.insert({
       title: text,
-      author: Meteor.user().username,
+      author: auth,
       time: new Date(),
     });
 

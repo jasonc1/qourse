@@ -5,6 +5,16 @@ Template.questionItem.helpers({
 
   responseCount: function() {
     return Comments.find({questionId: FlowRouter.current().params._id}).count();
+  },
+
+  genUserURL: function(author) {
+    console.log("hello ");
+    console.log(author);
+    if (author == "Anonymous User") {
+      return "#";
+    } else {
+      return "/users/" + author;
+    }
   }
 });
 
