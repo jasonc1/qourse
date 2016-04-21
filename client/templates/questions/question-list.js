@@ -10,6 +10,10 @@ Template.questionList.events({
     
     const target = event.target;
     const text = target.question.value;
+    const desc = target.description.value;
+    const tags = target.tags.value;
+ 
+    const tagsArr = tags.split(", ");
 
     var anon = document.getElementById('anon');
     if (anon.checked) {
@@ -21,6 +25,8 @@ Template.questionList.events({
     Questions.insert({
       title: text,
       author: auth,
+      description: desc,
+      tags: tagsArr,
       time: new Date(),
     });
 

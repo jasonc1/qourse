@@ -11,7 +11,7 @@ Template.questionItem.helpers({
     console.log("hello ");
     console.log(author);
     if (author == "Anonymous User") {
-      return "#";
+      return "";
     } else {
       return "/users/" + author;
     }
