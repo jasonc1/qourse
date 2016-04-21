@@ -17,7 +17,7 @@ Template.questionListItem.helpers({
   },
 
   genTags: function() {
-    if (this.tags != "") {
+    if (this.tags.length != 0) {
       var returnStr = "Tags: ";
 
       for (var i = 0; i < this.tags.length; i++) {
