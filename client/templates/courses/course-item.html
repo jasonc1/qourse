@@ -7,6 +7,10 @@
   </div>
 
   <div>
-    <p>Related questions will show up here...</p>
+  {{#with course }}
+    {{#each relatedQuestions }}
+      {{> questionListItem }}
+    {{/each}}
+  {{/with }}
   </div>
 </template>
