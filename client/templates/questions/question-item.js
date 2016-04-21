@@ -18,6 +18,8 @@ Template.questionItem.helpers({
   },
 
   genTags: function(tags) {
+    if (!tags) return;
+
     if (tags.length != 0) {
       var returnStr = "Tags: ";
 
