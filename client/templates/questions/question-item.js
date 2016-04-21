@@ -64,4 +64,14 @@ Template.questionItem.events({
 
     target.answer.value = '';
   }, 
+
+  'click .delPost': function(e) {
+    e.preventDefault();
+    
+    if (confirm("Delete this post?")) {
+      Meteor.call('deleteQuestion', this._id);
+      FlowRouter.go('/');
+    }
+  }
 });
+
