@@ -34,6 +34,15 @@ Template.questionItem.helpers({
 
       return Spacebars.SafeString(returnStr);
     }
+  },
+
+  showDelete: function() {
+    var authorId = Meteor.users.findOne({username: this.author })._id;
+    console.log(authorId);
+    console.log(Meteor.userId());
+    if (authorId === Meteor.userId()) {
+      return Spacebars.SafeString("<a class='details delPost' href='#'>DELETE POST</a>");
+    }
   }
 });
 
