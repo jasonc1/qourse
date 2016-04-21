@@ -15,6 +15,23 @@ Template.questionItem.helpers({
     } else {
       return "/users/" + author;
     }
+  },
+
+  genTags: function(tags) {
+    if (tags != "") {
+      var returnStr = "Tags: ";
+
+      for (var i = 0; i < tags.length; i++) {
+        tags.length[i] = tags[i].trim();
+        if (i == tags.length - 1) {
+          returnStr += "<a href='/search/" + tags[i] + "'>" + tags[i] + "</a> ";
+        } else {
+          returnStr += "<a href='/search/" + tags[i] + "'>" + tags[i] + "</a>, ";
+        }
+      }
+
+      return Spacebars.SafeString(returnStr);
+    }
   }
 });
 
