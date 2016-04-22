@@ -1,20 +1,25 @@
 Template.register.events({
   'submit .user-register' (event) {
     event.preventDefault();
-    console.log("hi");
 
     const target = event.target;
     var userVar = target.registerUsername.value;
     var emailVar = target.registerEmail.value;
     var passVar = target.registerPassword.value;
 
-    console.log(userVar);
-    console.log(emailVar);
-    console.log(typeof passVar);
+    var majorVar = target.registerMajor.value;
+    var yearVar = target.registerYear.value;
+    var interestsVar = target.registerInterests.value;
+
     Accounts.createUser({
       username: userVar, 
       email: emailVar, 
-      password: passVar
+      password: passVar,
+      profile: {
+        major: majorVar,
+        year: yearVar,
+        interests: interestsVar
+      }
     });
 
   },

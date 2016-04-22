@@ -1,6 +1,11 @@
 <template name="userItem">
-  <h3 class = "white"> {{ user.username }}'s profile </h3>
-  I will be a profile page!!
+  <h3 class = "white"> About {{ user.username }}</h3>
+
+  <div>
+    <ul>
+      {{ genBio user }}
+    </ul>
+  </div>
 
   <div>
     <h3 class = "white">Questions Asked by {{ user.username }}</h3>
