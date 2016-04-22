@@ -8,8 +8,6 @@ Template.questionItem.helpers({
   },
 
   genUserURL: function(author) {
-    console.log("hello ");
-    console.log(author);
     if (author == "Anonymous User") {
       return "";
     } else {
@@ -38,8 +36,6 @@ Template.questionItem.helpers({
 
   showDelete: function() {
     var authorId = Meteor.users.findOne({username: this.author })._id;
-    console.log(authorId);
-    console.log(Meteor.userId());
     if (authorId === Meteor.userId()) {
       return Spacebars.SafeString("<a class='details delPost' href='#'>DELETE POST</a>");
     }

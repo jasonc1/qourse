@@ -1,8 +1,6 @@
 Template.commentItem.helpers({
   showDelete: function() {
     var authorId = Meteor.users.findOne({username: this.author })._id;
-    console.log(authorId);
-    console.log(Meteor.userId());
     if (authorId === Meteor.userId()) {
       return Spacebars.SafeString("<a class='details delResponse' href='#'>DELETE RESPONSE</a>");
     }
