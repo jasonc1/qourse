@@ -1,10 +1,22 @@
 <template name="userItem">
-  <h3 class = "white"> About {{ user.username }}</h3>
 
-  <div>
-    <ul>
-      {{ genBio user }}
-    </ul>
+  <div class = "card">
+
+    <div class = "row">
+      <div class = "four columns">
+        <img src = "http://www.hey.fr/fun/emoji/android/en/android/661-emoji_android_tired_face.png"/>
+      </div>
+
+
+      <div class = "eight columns ">
+        <h3 class = "blue"> {{ user.username }}'s profile</h3>
+
+          <ul id = "profile">
+            {{ genBio user }}
+          </ul>
+      </div>
+    </div>
+    
   </div>
 
   <div>
