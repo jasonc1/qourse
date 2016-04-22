@@ -9,6 +9,11 @@ Template.userItem.helpers({
     return Questions.find({author: userVar}, {sort: {time: -1}});
   },
 
+  userResponses: function() {
+    var userVar = FlowRouter.getParam("username");
+    return Comments.find({author: userVar}, {sort: {time: -1}});
+  },
+
   genBio: function(user) {
     var returnStr = "";
 

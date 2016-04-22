@@ -13,4 +13,12 @@
       {{> questionListItem}}
     {{/each}}
   </div>
+
+  <div>
+    <h3 class="white">Responses Given by {{ user.username }}</h3>
+
+    {{#each userResponses }}
+      {{> commentItem }}
+    {{/each }}
+  </div>
 </template>

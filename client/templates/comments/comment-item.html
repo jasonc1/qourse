@@ -1,7 +1,7 @@
 <template name="commentItem">
   <div class = "comment card">
     <h4 class = "blue">{{ content }}</h4>
-    <p class = "details">Answered by <a href="">{{ author }}</a> at {{ time }}<br />
+    <p class = "details">Answered by <a href="{{pathFor 'userPage' username=author}}">{{ author }}</a> at {{ time }}<br />
     {{ showDelete }}</p>
   </div>
   
