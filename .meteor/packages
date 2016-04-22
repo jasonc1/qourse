@@ -24,3 +24,5 @@ arillo:flow-router-helpers
 accounts-base
 accounts-password
 johnantoni:meteor-skeleton
+underscore
+check

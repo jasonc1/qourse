@@ -22,14 +22,17 @@ Template.questionList.events({
       auth = Meteor.user().username;
     }
 
-    Questions.insert({
-      title: text,
-      author: auth,
-      description: desc,
+    var question = {
+      title: $(event.target).find('[name=question]').val(),
+      description: $(event.target).find('[name=description]').val(),
       tags: tagsArr,
-      time: new Date(),
-    });
+      author: auth,
+    };
+
+    Meteor.call('insertQuestion', question);
 
     target.question.value = '';
+    target.description.value = '';
+    target.tags.value = '';
   },
 });
