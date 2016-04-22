@@ -52,14 +52,15 @@ Template.questionItem.events({
 
     const target = event.target;
     const comment = target.answer.value;
- 
-    Comments.insert({
-      content: comment,
-      author: Meteor.user().username,
-      time: new Date(),
-      questionId: FlowRouter.current().params._id,
-    });
 
+    var response = {
+      content: comment,
+      questionId: FlowRouter.current().params._id,
+      author: Meteor.user().username,
+    }
+
+    Meteor.call('insertResponse', response); 
+ 
     console.log("comment added");
 
     target.answer.value = '';
