@@ -1,3 +1,9 @@
+Template.questionItem.rendered = function () {
+  if (Questions.find({_id: FlowRouter.current().params._id}).count() === 0) {
+    BlazeLayout.render('layout', {content: 'notFound'});
+  }
+}
+
 Template.questionItem.helpers({
   question: function() {
     return Questions.findOne({_id: FlowRouter.current().params._id});
@@ -5,6 +11,14 @@ Template.questionItem.helpers({
 
   responseCount: function() {
     return Comments.find({questionId: FlowRouter.current().params._id}).count();
+  },
+
+  momentFormat: function(time) {
+    if ((moment().unix() - moment(time).unix()) < 3600) {
+      return moment(time).fromNow();
+    } else {
+      return moment(time).format("hh:mm a ddd, MMM D YYYY");
+    }
   },
 
   genUserURL: function(author) {
@@ -17,7 +31,7 @@ Template.questionItem.helpers({
 
   genTags: function(tags) {
     if (!tags) return;
-    console.log(tags);
+
     if (tags.length !== 0) {
       var returnStr = "Tags: ";
 
@@ -35,6 +49,7 @@ Template.questionItem.helpers({
   },
 
   showDelete: function() {
+    if (this.author === "Anonymous User") return;
     var authorId = Meteor.users.findOne({username: this.author })._id;
     if (authorId === Meteor.userId()) {
       return Spacebars.SafeString("<a class='details delPost' href='#'>DELETE POST</a>");
@@ -48,17 +63,24 @@ Template.questionItem.events({
 
     const target = event.target;
     const comment = target.answer.value;
+    var auth = "";
+
+    var anon = document.getElementById('anon');
+    console.log(anon.checked);
+    if (anon.checked) {
+      auth = "Anonymous User"; 
+    } else {
+      auth = Meteor.user().username;
+    }
 
     var response = {
       content: comment,
       questionId: FlowRouter.current().params._id,
-      author: Meteor.user().username,
+      author: auth
     }
 
     Meteor.call('insertResponse', response); 
  
-    console.log("comment added");
-
     target.answer.value = '';
   }, 
 

@@ -2,7 +2,8 @@
       <div class = "card">
         <h4 id = "question"><a href="{{pathFor 'questionPage' _id=_id}}">{{ title }}</a></h4>
         <p class = "question-description">{{ description }}</p>
-        <p class = "details" >Asked by <a href="{{ genUserURL }}">{{ author }}</a> at {{ time }} <br />
+        <p class = "details" >Asked by <a href="{{ genUserURL }}">{{ author }}</a>
+        ({{ momentFormat time }}) <br />
         {{ genTags }}
         </p>
         <p class = "responseCount"><a href="{{pathFor 'responsesOnQuestionPage' _id=_id}}">{{ responseCount }}</a></p>

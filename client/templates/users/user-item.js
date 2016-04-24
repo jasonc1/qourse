@@ -1,3 +1,9 @@
+Template.userItem.rendered = function () {
+  if (Meteor.users.find({username: FlowRouter.current().params.username}).count() === 0) {
+    BlazeLayout.render('layout', {content: 'notFound'});
+  }
+}
+
 Template.userItem.helpers({
   user: function() {
     var userVar = FlowRouter.getParam("username");

@@ -2,7 +2,8 @@
   <div class = "card">
     <h4 id = "question" class = "blue">{{ question.title }}</h4>
     <p class = "question-description">{{ question.description }}</p>
-    <p class = "details">Asked by <a href="{{ genUserURL question.author }}">{{ question.author }}</a> at {{ question.time }} <br />
+    <p class = "details">Asked by <a href="{{ genUserURL question.author }}">{{ question.author }}</a>
+    ({{ momentFormat question.time }}) <br />
     {{ genTags question.tags }} </p>
     
     <p class = "delete">{{#with question }}
