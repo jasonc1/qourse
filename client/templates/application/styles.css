@@ -120,9 +120,17 @@ form.new-question input:focus{
   transition: border .5s;
 }
 
+form.search input:focus{
+  border: solid #00DC8F;
+  transition: border .5s;
+}
 
 
 form.new-question input::-webkit-input-placeholder {
+  color: white;
+}
+
+form.search input::-webkit-input-placeholder {
   color: white;
 }
 
