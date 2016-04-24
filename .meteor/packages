@@ -26,3 +26,4 @@ accounts-password
 johnantoni:meteor-skeleton
 underscore
 check
+session
