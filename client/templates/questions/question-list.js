@@ -14,6 +14,11 @@ Template.questionList.events({
     const tags = target.tags.value;
 
     if (text === "") { return };
+
+    var tagsArr = tags.split(", ");
+    if (tags === "") {
+      tagsArr = [];
+    }
  
     var anon = document.getElementById('anon');
     if (anon.checked) {
@@ -25,7 +30,7 @@ Template.questionList.events({
     var question = {
       title: $(event.target).find('[name=question]').val(),
       description: $(event.target).find('[name=description]').val(),
-      tags: tags,
+      tags: tagsArr,
       author: auth,
     };
 
