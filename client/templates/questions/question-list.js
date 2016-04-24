@@ -15,11 +15,6 @@ Template.questionList.events({
 
     if (text === "") { return };
  
-    tagsArr = tags.split(", ");
-    if (tags === "") {
-      tagsArr = [];
-    }
-
     var anon = document.getElementById('anon');
     if (anon.checked) {
       auth = "Anonymous User";
@@ -30,7 +25,7 @@ Template.questionList.events({
     var question = {
       title: $(event.target).find('[name=question]').val(),
       description: $(event.target).find('[name=description]').val(),
-      tags: tagsArr,
+      tags: tags,
       author: auth,
     };
 
