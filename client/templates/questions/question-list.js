@@ -13,7 +13,10 @@ Template.questionList.events({
     const desc = target.description.value;
     const tags = target.tags.value;
  
-    const tagsArr = tags.split(", ");
+    tagsArr = tags.split(", ");
+    if (tags === "") {
+      tagsArr = [];
+    }
 
     var anon = document.getElementById('anon');
     if (anon.checked) {
