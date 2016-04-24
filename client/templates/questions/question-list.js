@@ -21,6 +21,8 @@ Template.questionList.events({
     }
  
     var anon = document.getElementById('anon');
+    var auth = "";
+   
     if (anon.checked) {
       auth = "Anonymous User";
     } else {
