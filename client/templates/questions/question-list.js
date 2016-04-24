@@ -12,6 +12,8 @@ Template.questionList.events({
     const text = target.question.value;
     const desc = target.description.value;
     const tags = target.tags.value;
+
+    if (text === "") { return };
  
     tagsArr = tags.split(", ");
     if (tags === "") {
