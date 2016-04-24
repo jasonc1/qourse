@@ -7,8 +7,6 @@ if (Meteor.isClient) {
   Template.search.rendered = function () {
     var searchParam = FlowRouter.getParam('searchParam');
     if (searchParam !== '' && searchParam !== undefined) {
-      console.log("hello?");
-      console.log(searchParam);
       QuestionSearch.search(searchParam);
     }
   }

@@ -33,9 +33,9 @@ Template.questionListItem.helpers({
       for (var i = 0; i < this.tags.length; i++) {
         this.tags.length[i] = this.tags[i].trim();
         if (i == this.tags.length - 1) {
-          returnStr += "<a href='/search/" + this.tags[i] + "'>" + this.tags[i] + "</a> ";
+          returnStr += "<a>" + this.tags[i] + "</a> ";
         } else {
-          returnStr += "<a href='/search/" + this.tags[i] + "'>" + this.tags[i] + "</a>, ";
+          returnStr += "<a>" + this.tags[i] + "</a>, ";
         }
       }
 

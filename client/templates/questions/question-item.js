@@ -38,9 +38,9 @@ Template.questionItem.helpers({
       for (var i = 0; i < tags.length; i++) {
         tags.length[i] = tags[i].trim();
         if (i == tags.length - 1) {
-          returnStr += "<a href='/search/" + tags[i] + "'>" + tags[i] + "</a> ";
+          returnStr += "<a>" + tags[i] + "</a> ";
         } else {
-          returnStr += "<a href='/search/" + tags[i] + "'>" + tags[i] + "</a>, ";
+          returnStr += "<a>" + tags[i] + "</a>, ";
         }
       }
 
